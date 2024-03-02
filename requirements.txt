@@ -1,6 +1,14 @@
 asgiref==3.7.2
+deap==1.4.1 #installed
+defusedxml==0.7.1
 Django==4.2.10
 djangorestframework==3.14.0
+numpy==1.26.4
+odfpy==1.4.1 #installed
+pandas==2.2.1 #installed
+python-dateutil==2.9.0.post0
 pytz==2024.1
+six==1.16.0
 sqlparse==0.4.4
 typing_extensions==4.10.0
+tzdata==2024.1
