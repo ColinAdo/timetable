@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <h3>Upload File</h3>
+    <form action="" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="timetable" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <h3>Table </h3>
+
+    <table>
+        <tr>
+            <th>Unit code </th>
+            <th>Unite name</th>
+        </tr>
+       
+        {% for timetable in timetables %}
+        <tr>
+            <td>{{timetable.unit_code}}</td>
+            <td>{{timetable.unit_name}}</td>
+        </tr>
+        
+        {% endfor %}
+        
+    </table> 
+    <hr>
+
+  </body>
+</html>

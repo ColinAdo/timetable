@@ -1,0 +1,11 @@
+{% for username, user_data in all_users_timetables.items %}
+    <h2>{{ username }}'s Timetables</h2>
+    {% for batch_data in user_data %}
+        <h3>Batch ID: {{ batch_data.batch_id }}</h3>
+        <ul>
+            {% for timetable in batch_data.timetables %}
+                <li>{{ timetable.unit_code }} | {{ timetable.unit_name }} | {{ timetable.day_of_week }} | {{ timetable.lesson_time }}</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+{% endfor %}
