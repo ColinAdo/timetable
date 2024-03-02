@@ -7,6 +7,7 @@ class Timetable(models.Model):
         related_name='timetables', 
         on_delete=models.CASCADE
         )
+    batch_id = models.CharField(max_length=50, blank=True, null=True)
     day_of_week = models.CharField(max_length=200)
     lesson_time = models.CharField(max_length=200)
     unit_code = models.CharField(max_length=200)
@@ -16,6 +17,7 @@ class Timetable(models.Model):
     mode_of_study = models.CharField(max_length=200, default='regular')
     room = models.CharField(max_length=200, blank=True)
     group = models.IntegerField(default=0)
+    timestamp = models.DateTimeField(auto_now_add=True, null=True, blank=True)
 
     def __str__(self):
-        return f"{self.owner.username} timetable"
+        return f"{self.owner.username} timetable - {self.batch_id}"
