@@ -4,8 +4,7 @@ from django.shortcuts import render
 from timetables.models import Timetable
 
 import pandas as pd
-import uuid  # Import the uuid module for generating unique IDs
-
+import uuid
 
 def index(request, batch_id=None):
     template = 'index.html'
