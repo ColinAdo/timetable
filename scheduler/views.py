@@ -44,11 +44,6 @@ def index(request, batch_id=None):
                 )
                 timetable_entry.save()
 
-            # Now you have created entries with unit_code and unit_name, assigned batch_id, and the day_of_week and lesson_time fields are placeholders
-            # You can proceed to run the genetic algorithm to assign unique day and time slots
-
-            # ...
-
         except pd.errors.EmptyDataError:
             # Handle the case where the uploaded file is empty
             context['error_message'] = 'The uploaded file is empty.'
